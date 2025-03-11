@@ -35,7 +35,7 @@ Below is a table of the main functions included in the Mihomo override package:
 
 ```bash
 # Subscription conversion template URL (copy and replace YOURURL field)
-https://api.sublink.dev/sub?config=https://github.com/Ckrvxr/MihomoRules/raw/refs/heads/main/Source/Override/Subconverter.yaml&target=clash&udp=true&url=YOURURL
+https://api.sublink.dev/sub?config=https://github.com/Ckrvxr/MihomoRules/raw/refs/heads/main/Source/Override/Subconverter.yaml&target=clash&udp=true&add_emoji=true&url=YOURURL
 ```
 
 **Parameter Description Table**
@@ -45,6 +45,7 @@ https://api.sublink.dev/sub?config=https://github.com/Ckrvxr/MihomoRules/raw/ref
 | config    | ✔️       | http://....Subconverter.yaml  | Rule template address         |
 | target    | ✔️       | clash                         | Output format                 |
 | udp       |          | true                          | Enable UDP forwarding         |
+| add_emoji |          | true                          | Add emoji flag                |
 | url       | ✔️       | https://...com/subscribe/xxxx | Original subscription address |
 
 ---
