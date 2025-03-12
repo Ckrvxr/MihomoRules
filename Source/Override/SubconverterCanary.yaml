@@ -275,6 +275,8 @@ custom:
       emoji: "🇱🇹"
     - match: "(Luxembourg|卢森堡|盧森堡|\\bLU\\b(?!\\S))"
       emoji: "🇱🇺"
+    - match: "(Macao|Macau|澳门|澳門|\\bMO\\b(?!\\S))"
+      emoji: "🇲🇴"
     - match: "(Madagascar|马达加斯加|馬達加斯加|\\bMG\\b(?!\\S))"
       emoji: "🇲🇬"
     - match: "(Malawi|马拉维|馬拉維|\\bMW\\b(?!\\S))"
