@@ -13,9 +13,6 @@ custom:
     - name: "AD & Privacy"
       type: select
       rule: ["[]REJECT", "[]PASS"]
-    - name: "EDNS"
-      type: select
-      rule: ["[]REJECT", "[]PASS"]
     - name: "PCDN"
       type: select
       rule: ["[]REJECT", "[]PASS"]
@@ -45,8 +42,6 @@ custom:
       group: "AD & Privacy"
     - rule: "RULE-SET,AdRules"
       group: "AD & Privacy"
-    - rule: "RULE-SET,AntiEDNS"
-      group: "EDNS"
     - rule: "RULE-SET,AntiPCDN"
       group: "PCDN"
     # https://github.com/v2fly/domain-list-community/blob/master/data/category-games
