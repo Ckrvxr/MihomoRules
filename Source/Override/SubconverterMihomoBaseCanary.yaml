@@ -113,51 +113,44 @@ geox-url:
   mmdb: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/country.mmdb
   asn: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/GeoLite2-ASN.mmdb
 
-
 rule-providers:
-  applicationdesktop:
+  DirectProcess:
     type: http
     behavior: classical
     format: yaml
     interval: 43200
-    url: "https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/applications.txt"
-  antiantifraud:
+    url: "https://fastly.jsdelivr.net/gh/Ckrvxr/MihomoRules@main/Source/Addition/DirectProcess.yaml"
+  AntiAntiFraud:
     type: http
     behavior: classical
     format: yaml
     interval: 43200
     url: "https://fastly.jsdelivr.net/gh/Ckrvxr/MihomoRules@main/Source/Addition/AntiAntiFraud.yaml"
-  fuck-you-miui-fhosts:
+  Fuck-You-MIUI-Fhosts:
     type: http
     behavior: classical
     format: yaml
     interval: 43200
     url: "https://fastly.jsdelivr.net/gh/Ckrvxr/MihomoRules@release/Fuck-You-MIUI-Fhosts.yaml"
-  fuck-you-miui-mihosts:
+  Fuck-You-MIUI-MIhosts:
     type: http
     behavior: classical
     format: yaml
     interval: 43200
     url: "https://fastly.jsdelivr.net/gh/Ckrvxr/MihomoRules@release/Fuck-You-MIUI-MIhosts.yaml"
-  awavenue:
+  AWAvenue:
     type: http
     behavior: classical
     format: yaml
     interval: 43200
     url: "https://fastly.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-Clash-classical.yaml"
-  adrules:
+  AdRules:
     type: http
     behavior: domain
     format: text
     interval: 43200
     url: "https://fastly.jsdelivr.net/gh/Cats-Team/AdRules@main/adrules_domainset.txt"
-  anti-ad-edns:
-    type: http
-    behavior: classical
-    format: yaml
-    interval: 43200
-    url: "https://fastly.jsdelivr.net/gh/Ckrvxr/MihomoRules@release/anti-AD-EDNS.yaml"
-  antipcdn:
+  AntiPCDN:
     type: http
     behavior: classical
     format: yaml
