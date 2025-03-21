@@ -85,7 +85,6 @@ rules:
 - https://github.com/StevenBlack/hosts
 - https://github.com/tindy2013/subconverter
 - https://github.com/zsokami/ACL4SSR
-- https://github.com/youshandefeiyang/sub-web-modify
 - https://github.com/LoopDns/Fuck-you-MIUI/
 - https://github.com/Cats-Team/AdRules
 - https://github.com/TG-Twilight/AWAvenue-Ads-Rule
