@@ -49,7 +49,7 @@ payload:
   - PROCESS-NAME,Surge%202
   - PROCESS-NAME,Surge%203
   - PROCESS-NAME,Surge%204
-  # Downloader
+  # P2P Downloader 
   - PROCESS-NAME,BitComet
   - PROCESS-NAME,BitComet.exe
   - PROCESS-NAME,BitComet_x64.exe
@@ -84,6 +84,8 @@ payload:
   - PROCESS-NAME,xdm.exe
   - PROCESS-NAME,xdman
   - PROCESS-NAME,xdman.exe
+  - PROCESS-NAME,xdman.exe
+  - PROCESS-NAME-REGEX,SDI_.*
   - PROCESS-NAME,com.xunlei.downloadprovider
   - PROCESS-NAME,com.utorrent.client
   - PROCESS-NAME,com.utorrent.client.pro
