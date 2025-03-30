@@ -1,5 +1,5 @@
 payload:
-  # Proxy
+  # (Proxy)
   - PROCESS-NAME,hysteria
   - PROCESS-NAME,hysteria.exe
   - PROCESS-NAME,leaf
@@ -49,7 +49,7 @@ payload:
   - PROCESS-NAME,Surge%202
   - PROCESS-NAME,Surge%203
   - PROCESS-NAME,Surge%204
-  # P2P Downloader 
+  # (P2P) Downloader 
   - PROCESS-NAME,BitComet
   - PROCESS-NAME,BitComet.exe
   - PROCESS-NAME,BitComet_x64.exe
@@ -63,6 +63,7 @@ payload:
   - PROCESS-NAME,Thunder
   - PROCESS-NAME,Thunder.exe
   - PROCESS-NAME,ThunderVIP.exe
+  - PROCESS-NAME,com.xunlei.downloadprovider
   - PROCESS-NAME,Transmission
   - PROCESS-NAME,WebTorrent
   - PROCESS-NAME,WebTorrent.exe
@@ -72,6 +73,7 @@ payload:
   - PROCESS-NAME,aria2c.exe
   - PROCESS-NAME,fdm
   - PROCESS-NAME,fdm.exe
+  - PROCESS-NAME,org.freedownloadmanager.fdm
   - PROCESS-NAME,qBittorrent
   - PROCESS-NAME,qbittorrent.exe
   - PROCESS-NAME,qbittorrent-nox
@@ -80,15 +82,13 @@ payload:
   - PROCESS-NAME,transmission-qt.exe
   - PROCESS-NAME,uTorrent
   - PROCESS-NAME,uTorrent.exe
+  - PROCESS-NAME,com.utorrent.client
+  - PROCESS-NAME,com.utorrent.client.pro
   - PROCESS-NAME,xdm
   - PROCESS-NAME,xdm.exe
   - PROCESS-NAME,xdman
   - PROCESS-NAME,xdman.exe
   - PROCESS-NAME,xdman.exe
-  - PROCESS-NAME-REGEX,SDI_.*
-  - PROCESS-NAME,com.xunlei.downloadprovider
-  - PROCESS-NAME,com.utorrent.client
-  - PROCESS-NAME,com.utorrent.client.pro
   - PROCESS-NAME,com.bittorrent.client
   - PROCESS-NAME,com.bittorrent.client.pro
   - PROCESS-NAME,com.delphicoder.flud
@@ -96,11 +96,10 @@ payload:
   - PROCESS-NAME,org.proninyaroslav.libretorrent
   - PROCESS-NAME,intelligems.torrdroid
   - PROCESS-NAME,com.mediaget.android
-  - PROCESS-NAME,org.freedownloadmanager.fdm
   - PROCESS-NAME,com.dv.adm
-  - PROCESS-NAME,idm.internet.download
-  - PROCESS-NAME,idm.internet.download.manager.plus
-  # VPN
+  # (P2P) Snappy Driver Installer
+  - PROCESS-NAME-REGEX,SDI_.*
+  # (VPN)
   - PROCESS-NAME,tailscale
   - PROCESS-NAME,tailscale.exe
   - PROCESS-NAME,tailscaled
