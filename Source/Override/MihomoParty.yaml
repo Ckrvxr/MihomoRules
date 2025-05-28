@@ -140,7 +140,7 @@ rule-providers:
     url: "https://fastly.jsdelivr.net/gh/Ckrvxr/MihomoRules@release/Fuck-You-MIUI-MIhosts.yaml"
   AWAvenue:
     type: http
-    behavior: classical
+    behavior: domain
     format: yaml
     interval: 43200
     url: "https://fastly.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-Clash.yaml"
