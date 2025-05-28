@@ -143,7 +143,7 @@ rule-providers:
     behavior: classical
     format: yaml
     interval: 43200
-    url: "https://fastly.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-Clash-classical.yaml"
+    url: "https://fastly.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-Clash.yaml"
   AdRules:
     type: http
     behavior: domain
