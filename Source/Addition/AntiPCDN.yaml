@@ -12,14 +12,13 @@ payload:
   - DOMAIN-SUFFIX,onethingpcs.com
   - DOMAIN-SUFFIX,jomodns.cn
   - DOMAIN-SUFFIX,p2p.huya.com
-  - DOMAIN-SUFFIX,stun.douyucdn.cn
   - DOMAIN-SUFFIX,stun.hitv.com
-  - DOMAIN-SUFFIX,stun1.douyucdn.cn
-  - DOMAIN-SUFFIX,mcdn.bilivideo.cn
   - DOMAIN-SUFFIX,tpa-hcdn.iqiyi.com
+  - DOMAIN-SUFFIX,mcdn.bilivideo.cn
   - AND,((DOMAIN-SUFFIX,biliapi.net),(DOMAIN-KEYWORD,pcdn))
   - AND,((DOMAIN-SUFFIX,youku.com),(DOMAIN-KEYWORD,pcdn))
   - AND,((DOMAIN-SUFFIX,douyucdn.cn),(DOMAIN-KEYWORD,p2p))
+  - AND,((DOMAIN-SUFFIX,douyucdn.cn),(DOMAIN-KEYWORD,stun))
   - AND,((DOMAIN-SUFFIX,qq.com),(DOMAIN-KEYWORD,p2p))
   # - DOMAIN-REGEX,.*pcdn.*biliapi.net
   # - DOMAIN-REGEX,.*pcdn.*youku.com
