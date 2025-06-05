@@ -7,21 +7,24 @@ custom:
     - "(Official|官网|官網|Data Left|Remain|剩余|剩餘|Traffic|流量|Expire|Expiry|到期|过期|過期|效期|Time|时间|時間|Reset|重置|分割线|(\\d[\\d.]*\\s*[MG]B[^\\dA-Za-z]+|[:：]\\s*)\\d[\\d.]*\\s*GB(?!\\dA-Za-z))"
 
   custom_proxy_group:
+    - name: "PROXY"
+      type: select
+      rule: [".*"]  
     - name: "🇨🇳 P.R.C"
       type: select
-      rule: ["[]DIRECT", "[]REJECT", ".*"]  
+      rule: ["[]DIRECT", "[]PROXY", "[]REJECT"]  
     - name: "🍎 Apple"
       type: select
-      rule: [".*", "[]DIRECT", "[]REJECT"]
+      rule: ["[]PROXY", "[]DIRECT", "[]REJECT"]
     - name: "🤖 Google"
       type: select
-      rule: [".*", "[]DIRECT", "[]REJECT"]  
+      rule: ["[]PROXY", "[]DIRECT", "[]REJECT"]  
     - name: "Ⓜ️ Microsoft"
       type: select
-      rule: [".*", "[]DIRECT", "[]REJECT"]
+      rule: ["[]PROXY", "[]DIRECT", "[]REJECT"]
     - name: "🌎 OTHERS"
       type: select
-      rule: [".*", "[]DIRECT", "[]REJECT"]
+      rule: ["[]PROXY", "[]DIRECT", "[]REJECT"]
     - name: "🛑 AD & Privacy"
       type: select
       rule: ["[]REJECT", "[]PASS"]
