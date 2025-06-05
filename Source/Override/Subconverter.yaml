@@ -7,7 +7,7 @@ custom:
     - "(Official|官网|官網|Data Left|Remain|剩余|剩餘|Traffic|流量|Expire|Expiry|到期|过期|過期|效期|Time|时间|時間|Reset|重置|分割线|(\\d[\\d.]*\\s*[MG]B[^\\dA-Za-z]+|[:：]\\s*)\\d[\\d.]*\\s*GB(?!\\dA-Za-z))"
 
   custom_proxy_group:
-    - name: "SELECT"
+    - name: "PROXY"
       type: select
       rule: [".*"]
     - name: "AD & Privacy"
@@ -18,16 +18,19 @@ custom:
       rule: ["[]REJECT", "[]PASS"]
     - name: "Apple"
       type: select
-      rule: ["[]SELECT", "[]DIRECT", "[]REJECT"]
+      rule: ["[]PROXY", "[]DIRECT", "[]REJECT"]
     - name: "Microsoft"
       type: select
-      rule: ["[]SELECT", "[]DIRECT", "[]REJECT"]
+      rule: ["[]PROXY", "[]DIRECT", "[]REJECT"]
     - name: "Google"
       type: select
-      rule: ["[]SELECT", "[]DIRECT", "[]REJECT"]
-    - name: "FINAL"
+      rule: ["[]PROXY", "[]DIRECT", "[]REJECT"]
+    - name: "P.R.C"
       type: select
-      rule: ["[]SELECT", "[]DIRECT", "[]REJECT"]
+      rule: ["[]DIRECT", "[]PROXY", "[]REJECT"]    
+    - name: "OTHERS"
+      type: select
+      rule: ["[]PROXY", "[]DIRECT", "[]REJECT"]
       
   rulesets:
     - rule: "RULE-SET,DirectProcess"
@@ -47,28 +50,28 @@ custom:
     # https://github.com/v2fly/domain-list-community/blob/master/data/category-games
     # https://github.com/Loyalsoldier/v2ray-rules-dat?tab=readme-ov-file#%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95
     - rule: "GEOSITE,category-games@cn"
-      group: DIRECT
+      group: "P.R.C"
     - rule: "GEOSITE,microsoft"
-      group: Microsoft
+      group: "Microsoft"
     - rule: "GEOSITE,apple"
-      group: Apple
+      group: "Apple"
     # https://www.yetpage.com/archives/278
     - rule: "GEOSITE,google"
-      group: Google
+      group: "Google"
     - rule: "GEOSITE,private"
-      group: DIRECT
+      group: "P.R.C"
     - rule: "GEOSITE,cn"
-      group: DIRECT
+      group: "P.R.C"
     - rule: "GEOSITE,!cn"
-      group: SELECT
+      group: "OTHERS"
     - rule: "GEOIP,private"
-      group: DIRECT
+      group: "P.R.C"
     - rule: "GEOIP,cn"
-      group: DIRECT
+      group: "P.R.C"
     - rule: "GEOIP,!cn"
-      group: SELECT
+      group: "OTHERS"
     - rule: "MATCH"
-      group: FINAL
+      group: "OTHERS"
 
   add_emoji: true
   remove_old_emoji: true
