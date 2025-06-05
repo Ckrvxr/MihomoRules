@@ -391,7 +391,7 @@ custom:
       emoji: "🇸🇴"
     - match: "(South Africa|南非|Johannesburg|约翰内斯堡|約翰內斯堡|约堡|\\bZA\\b(?!\\S))"
       emoji: "🇿🇦"
-    - match: "(South Korea|Korea|韩国|韓國|韩|韓|Seoul|首尔|首爾|Busan|釜山|Daegu|大邱|\\bKR\\b(?!\\S))"
+    - match: "(South Korea|Korea|韩国|韓國|韩|韓|Seoul|首尔|首爾|Busan|釜山|Daegu|大邱|\\bKR(?:\\d*\\s*)?)"
       emoji: "🇰🇷"
     - match: "(South Sudan|南苏丹|南蘇丹|\\bSS\\b(?!\\S))"
       emoji: "🇸🇸"
