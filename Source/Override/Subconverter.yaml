@@ -236,7 +236,7 @@ custom:
       emoji: "🇮🇷"
     - match: "(Iraq|伊拉克|\\bIQ(?:\\d*\\s*)?)"
       emoji: "🇮🇶"
-    - match: "(Ireland|爱尔兰|愛爾蘭|Dublin|都柏林|Cork|科克|\\bIE(?:\\d*\\s*)?)"
+    - match: "(Ireland|爱尔兰|愛爾蘭|Dublin|都柏林|Cork|科克|\\bIE\\s*\\d+)"
       emoji: "🇮🇪"
     - match: "(Israel|以色列|Jerusalem|耶路撒冷|\\bIL(?:\\d*\\s*)?)"
       emoji: "🇮🇱"
