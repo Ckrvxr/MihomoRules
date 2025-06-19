@@ -158,11 +158,51 @@ rule-providers:
     url: "https://fastly.jsdelivr.net/gh/Ckrvxr/MihomoRules@main/Source/Addition/AntiPCDN.yaml"
 
 proxy-groups:
-  - name: "SELECT"
+  - name: "PROXY"
     icon: "https://fastly.jsdelivr.net/gh/shindgewongxj/WHATSINStash@master/icon/select.png"
     type: select
     include-all: true
-    exclude-filter: "(?i)GB|Traffic|Expire|Premium|官网|频道|订阅|ISP|流量|到期|重置"
+    exclude-filter: "(?i)GB|Traffic|Expire|Premium|官网|频道|订阅|ISP|流量|到期|重置|过滤"
+    url: "http://www.gstatic.com/generate_204"
+  - name: "P.R.C and Private"
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/China.png"
+    type: select
+    proxies:
+      - "DIRECT"
+      - "PROXY"
+      - "REJECT"
+    url: "http://connect.rom.miui.com/generate_204"
+  - name: "Google"
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google_Search.png"
+    type: select
+    proxies:
+      - "PROXY"
+      - "DIRECT"
+      - "REJECT"
+    url: "http://www.gstatic.com/generate_204"
+  - name: "Microsoft"
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Microsoft.png"
+    type: select
+    proxies:
+      - "PROXY"
+      - "DIRECT"
+      - "REJECT"
+    url: "http://www.msftconnecttest.com/connecttest.txt"
+  - name: "Apple"
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple.png"
+    type: select
+    proxies:
+      - "PROXY"
+      - "DIRECT"
+      - "REJECT"
+    url: "http://captive.apple.com"
+  - name: "Others"
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Final.png"
+    type: select
+    proxies:
+      - "PROXY"
+      - "DIRECT"
+      - "REJECT"
     url: "http://www.gstatic.com/generate_204"
   - name: "AD & Privacy"
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hijacking.png"
@@ -178,43 +218,11 @@ proxy-groups:
       - "REJECT"
       - "PASS"
     url: "http://www.gstatic.com/generate_204"
-  - name: "Microsoft"
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Microsoft.png"
-    type: select
-    proxies:
-      - "SELECT"
-      - "DIRECT"
-      - "REJECT"
-    url: "http://www.msftconnecttest.com/connecttest.txt"
-  - name: "Apple"
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple.png"
-    type: select
-    proxies:
-      - "SELECT"
-      - "DIRECT"
-      - "REJECT"
-    url: "http://captive.apple.com"
-  - name: "Google"
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google_Search.png"
-    type: select
-    proxies:
-      - "SELECT"
-      - "DIRECT"
-      - "REJECT"
-    url: "http://www.gstatic.com/generate_204"
-  - name: "FINAL"
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Final.png"
-    type: select
-    proxies:
-      - "SELECT"
-      - "DIRECT"
-      - "REJECT"
-    url: "http://www.gstatic.com/generate_204"
   - name: "GLOBAL"
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Global.png"
     type: select
     proxies:
-      - "SELECT"
+      - "PROXY"
       - "DIRECT"
       - "REJECT"
     url: "http://www.gstatic.com/generate_204"
@@ -229,15 +237,15 @@ rules:
   - "RULE-SET,AntiPCDN,PCDN"
   # https://github.com/v2fly/domain-list-community/blob/master/data/category-games
   # https://github.com/Loyalsoldier/v2ray-rules-dat?tab=readme-ov-file#%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95
-  - "GEOSITE,category-games@cn,DIRECT"
+  - "GEOSITE,category-games@cn,P.R.C and Private"
   - "GEOSITE,microsoft,Microsoft"
   - "GEOSITE,apple,Apple"
   # https://www.yetpage.com/archives/278
   - "GEOSITE,google,Google"
-  - "GEOSITE,private,DIRECT"
-  - "GEOSITE,cn,DIRECT"
-  - "GEOSITE,!cn,SELECT"
-  - "GEOIP,private,DIRECT"
-  - "GEOIP,cn,DIRECT"
-  - "GEOIP,!cn,SELECT"
-  - "MATCH,FINAL"
+  - "GEOSITE,private,P.R.C and Private"
+  - "GEOSITE,cn,P.R.C and Private"
+  - "GEOSITE,!cn,Others"
+  - "GEOIP,private,P.R.C and Private"
+  - "GEOIP,cn,P.R.C and Private"
+  - "GEOIP,!cn,Others"
+  - "MATCH,Others"
