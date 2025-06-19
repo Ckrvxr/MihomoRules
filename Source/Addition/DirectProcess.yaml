@@ -106,3 +106,5 @@ payload:
   - PROCESS-NAME,tailscaled.exe
   - PROCESS-NAME,zerotier-one
   - PROCESS-NAME,zerotier-one.exe
+  # (General)
+  - PROCESS-NAME,Weixin.exe
