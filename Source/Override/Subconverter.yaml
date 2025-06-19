@@ -10,19 +10,19 @@ custom:
     - name: "PROXY"
       type: select
       rule: [".*"]  
-    - name: "🇨🇳 P.R.C"
+    - name: "🇨🇳 P.R.C and Private"
       type: select
       rule: ["[]DIRECT", "[]PROXY", "[]REJECT"]  
-    - name: "🍎 Apple"
-      type: select
-      rule: ["[]PROXY", "[]DIRECT", "[]REJECT"]
     - name: "🤖 Google"
       type: select
       rule: ["[]PROXY", "[]DIRECT", "[]REJECT"]  
     - name: "Ⓜ️ Microsoft"
       type: select
       rule: ["[]PROXY", "[]DIRECT", "[]REJECT"]
-    - name: "🌎 OTHERS"
+    - name: "🍎 Apple"
+      type: select
+      rule: ["[]PROXY", "[]DIRECT", "[]REJECT"]
+    - name: "🌎 Others"
       type: select
       rule: ["[]PROXY", "[]DIRECT", "[]REJECT"]
     - name: "🛑 AD & Privacy"
@@ -50,28 +50,28 @@ custom:
     # https://github.com/v2fly/domain-list-community/blob/master/data/category-games
     # https://github.com/Loyalsoldier/v2ray-rules-dat?tab=readme-ov-file#%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95
     - rule: "GEOSITE,category-games@cn"
-      group: "🇨🇳 P.R.C"
-    - rule: "GEOSITE,apple"
-      group: "🍎 Apple"
+      group: "🇨🇳 P.R.C and Private"
     # https://www.yetpage.com/archives/278
     - rule: "GEOSITE,google"
       group: "🤖 Google"
     - rule: "GEOSITE,microsoft"
       group: "Ⓜ️ Microsoft"
+    - rule: "GEOSITE,apple"
+      group: "🍎 Apple"
     - rule: "GEOSITE,private"
-      group: "🇨🇳 P.R.C"
+      group: "🇨🇳 P.R.C and Private"
     - rule: "GEOSITE,cn"
-      group: "🇨🇳 P.R.C"
+      group: "🇨🇳 P.R.C and Private"
     - rule: "GEOSITE,!cn"
-      group: "🌎 OTHERS"
+      group: "🌎 Others"
     - rule: "GEOIP,private"
-      group: "🇨🇳 P.R.C"
+      group: "🇨🇳 P.R.C and Private"
     - rule: "GEOIP,cn"
-      group: "🇨🇳 P.R.C"
+      group: "🇨🇳 P.R.C and Private"
     - rule: "GEOIP,!cn"
-      group: "🌎 OTHERS"
+      group: "🌎 Others"
     - rule: "MATCH"
-      group: "🌎 OTHERS"
+      group: "🌎 Others"
 
   add_emoji: true
   remove_old_emoji: true
