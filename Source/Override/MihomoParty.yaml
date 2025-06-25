@@ -126,6 +126,18 @@ rule-providers:
     format: yaml
     interval: 43200
     url: "https://fastly.jsdelivr.net/gh/Ckrvxr/MihomoRules@main/Source/Addition/AntiAntiFraud.yaml"
+  AntiPCDNFix:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 43200
+    url: "https://fastly.jsdelivr.net/gh/Ckrvxr/MihomoRules@main/Source/Addition/AntiPCDNFix.yaml"
+  AntiPCDN:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 43200
+    url: "https://fastly.jsdelivr.net/gh/Ckrvxr/MihomoRules@main/Source/Addition/AntiPCDN.yaml"
   Fuck-You-MIUI-Fhosts:
     type: http
     behavior: classical
@@ -150,12 +162,7 @@ rule-providers:
     format: text
     interval: 43200
     url: "https://fastly.jsdelivr.net/gh/Cats-Team/AdRules@main/adrules_domainset.txt"
-  AntiPCDN:
-    type: http
-    behavior: classical
-    format: yaml
-    interval: 43200
-    url: "https://fastly.jsdelivr.net/gh/Ckrvxr/MihomoRules@main/Source/Addition/AntiPCDN.yaml"
+
 
 proxy-groups:
   - name: "PROXY"
@@ -204,15 +211,15 @@ proxy-groups:
       - "DIRECT"
       - "REJECT"
     url: "http://www.gstatic.com/generate_204"
-  - name: "AD & Privacy"
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hijacking.png"
+  - name: "PCDN"
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Server.png"
     type: select
     proxies:
       - "REJECT"
       - "PASS"
     url: "http://www.gstatic.com/generate_204"
-  - name: "PCDN"
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Server.png"
+  - name: "AD & Privacy"
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hijacking.png"
     type: select
     proxies:
       - "REJECT"
@@ -230,11 +237,12 @@ proxy-groups:
 rules:
   - "RULE-SET,DirectProcess,DIRECT"
   - "RULE-SET,AntiAntiFraud,REJECT"  
+  - "RULE-SET,AntiPCDNFix,DIRECT"
+  - "RULE-SET,AntiPCDN,PCDN"
   - "RULE-SET,Fuck-You-MIUI-Fhosts,AD & Privacy"
   - "RULE-SET,Fuck-You-MIUI-MIhosts,AD & Privacy"
   - "RULE-SET,AWAvenue,AD & Privacy"
   - "RULE-SET,AdRules,AD & Privacy"
-  - "RULE-SET,AntiPCDN,PCDN"
   # https://github.com/v2fly/domain-list-community/blob/master/data/category-games
   # https://github.com/Loyalsoldier/v2ray-rules-dat?tab=readme-ov-file#%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95
   - "GEOSITE,category-games@cn,P.R.C and Private"
