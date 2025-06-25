@@ -126,6 +126,18 @@ rule-providers:
     format: yaml
     interval: 43200
     url: "https://fastly.jsdelivr.net/gh/Ckrvxr/MihomoRules@main/Source/Addition/AntiAntiFraud.yaml"
+  AntiPCDNFix:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 43200
+    url: "https://fastly.jsdelivr.net/gh/Ckrvxr/MihomoRules@main/Source/Addition/AntiPCDNFix.yaml"
+  AntiPCDN:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 43200
+    url: "https://fastly.jsdelivr.net/gh/Ckrvxr/MihomoRules@main/Source/Addition/AntiPCDN.yaml"
   Fuck-You-MIUI-Fhosts:
     type: http
     behavior: classical
@@ -150,9 +162,3 @@ rule-providers:
     format: text
     interval: 43200
     url: "https://fastly.jsdelivr.net/gh/Cats-Team/AdRules@main/adrules_domainset.txt"
-  AntiPCDN:
-    type: http
-    behavior: classical
-    format: yaml
-    interval: 43200
-    url: "https://fastly.jsdelivr.net/gh/Ckrvxr/MihomoRules@main/Source/Addition/AntiPCDN.yaml"
