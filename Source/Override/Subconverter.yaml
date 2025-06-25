@@ -37,6 +37,10 @@ custom:
       group: DIRECT
     - rule: "RULE-SET,AntiAntiFraud"
       group: REJECT
+    - rule: "RULE-SET,AntiPCDNFix"
+      group: DIRECT
+    - rule: "RULE-SET,AntiPCDN"
+      group: "🛑 PCDN"
     - rule: "RULE-SET,Fuck-You-MIUI-Fhosts"
       group: "🛑 AD & Privacy"
     - rule: "RULE-SET,Fuck-You-MIUI-MIhosts"
@@ -45,8 +49,6 @@ custom:
       group: "🛑 AD & Privacy"
     - rule: "RULE-SET,AdRules"
       group: "🛑 AD & Privacy"
-    - rule: "RULE-SET,AntiPCDN"
-      group: "🛑 PCDN"
     # https://github.com/v2fly/domain-list-community/blob/master/data/category-games
     # https://github.com/Loyalsoldier/v2ray-rules-dat?tab=readme-ov-file#%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95
     - rule: "GEOSITE,category-games@cn"
