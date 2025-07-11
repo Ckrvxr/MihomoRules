@@ -4,7 +4,7 @@ custom:
   clash_rule_base: "https://raw.githubusercontent.com/Ckrvxr/MihomoRules/refs/heads/main/Source/Override/SubconverterMihomoBase.yaml"
   
   exclude_remarks:
-    - "(Official|官网|官網|Data Left|Remain|剩余|剩餘|Traffic|流量|Expire|Expiry|到期|过期|過期|效期|Time|时间|時間|Reset|重置|分割线|(\\d[\\d.]*\\s*[MG]B[^\\dA-Za-z]+|[:：]\\s*)\\d[\\d.]*\\s*GB(?!\\dA-Za-z))"
+    - "(Official|官网|官網|Data Left|Remain|剩余|剩餘|Traffic|流量|Expire|Expiry|到期|过期|過期|效期|Time|时间|時間|Time Out|超时|超時|Reset|重置|分割线|(\\d[\\d.]*\\s*[MG]B[^\\dA-Za-z]+|[:：]\\s*)\\d[\\d.]*\\s*GB(?!\\dA-Za-z))"
 
   custom_proxy_group:
     - name: "PROXY"
