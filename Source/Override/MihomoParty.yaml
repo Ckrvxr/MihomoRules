@@ -138,18 +138,6 @@ rule-providers:
     format: yaml
     interval: 43200
     url: "https://fastly.jsdelivr.net/gh/Ckrvxr/MihomoRules@main/Source/Addition/AntiPCDN.yaml"
-  Fuck-You-MIUI-Fhosts:
-    type: http
-    behavior: classical
-    format: yaml
-    interval: 43200
-    url: "https://fastly.jsdelivr.net/gh/Ckrvxr/MihomoRules@release/Fuck-You-MIUI-Fhosts.yaml"
-  Fuck-You-MIUI-MIhosts:
-    type: http
-    behavior: classical
-    format: yaml
-    interval: 43200
-    url: "https://fastly.jsdelivr.net/gh/Ckrvxr/MihomoRules@release/Fuck-You-MIUI-MIhosts.yaml"
   AWAvenue:
     type: http
     behavior: domain
@@ -239,8 +227,6 @@ rules:
   - "RULE-SET,AntiAntiFraud,REJECT"  
   - "RULE-SET,AntiPCDNFix,DIRECT"
   - "RULE-SET,AntiPCDN,PCDN"
-  - "RULE-SET,Fuck-You-MIUI-Fhosts,AD & Privacy"
-  - "RULE-SET,Fuck-You-MIUI-MIhosts,AD & Privacy"
   - "RULE-SET,AWAvenue,AD & Privacy"
   - "RULE-SET,AdRules,AD & Privacy"
   # https://github.com/v2fly/domain-list-community/blob/master/data/category-games
