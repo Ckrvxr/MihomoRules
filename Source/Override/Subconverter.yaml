@@ -41,10 +41,6 @@ custom:
       group: DIRECT
     - rule: "RULE-SET,AntiPCDN"
       group: "🛑 PCDN"
-    - rule: "RULE-SET,Fuck-You-MIUI-Fhosts"
-      group: "🛑 AD & Privacy"
-    - rule: "RULE-SET,Fuck-You-MIUI-MIhosts"
-      group: "🛑 AD & Privacy"
     - rule: "RULE-SET,AWAvenue"
       group: "🛑 AD & Privacy"
     - rule: "RULE-SET,AdRules"
