@@ -2,28 +2,29 @@
 
 MihomoRules is a rule library designed for [Mihomo](https://github.com/MetaCubeX/mihomo)(Clash Meta), providing AD-Blocking, Privacy Protection, and AntiAntiFraud features.
 
+These override scripts all uniformly have the following rules:
+
+| Rule Name         | Description |
+| ----------------- | ----------- |
+| DirectProcess     | Prevents proxy tools and P2P download software from using the proxy. |
+| AntiAntiFraud     | Strongly blocks anti-fraud programs on mobile phones, including automatic uploading of app lists. This is a set of rules collected and organized by this project. |
+| AntiPCDN          | Blocks P2P2 CDN to speed up streaming access. This is a set of rules collected by this project. |
+| AdRules           | Blocks ads and telemetry. |
+| AWAvenue          | Blocks ads and telemetry for mobile phone. |
+| category-games@cn | Allows games that support china access to use direct connections to save bandwidth. |
+
 ## 🎛️ Override Rule Configuration Guide
 
-Below is a table of the main functions included in the Mihomo override package:
+There are two solutions to override the configuration here, choose one according to the sorftware.
 
-| Function Name      | Description                                                                                                                                                              |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| DirectProcess      | Prevents proxy tools and P2P download software from using the proxy.                                                                                                     |
-| AntiAntiFraud      | Strongly blocks anti-fraud programs on mobile phones, including automatic uploading of app lists. This is a set of rules collected and organized by this project.        |
-| Fuck-You-MIUI      | Strongly blocks MIUI telemetry.                                                                                                                                          |
-| AdRules            | Blocks ads and telemetry.                                                                                                                                                |
-| AWAvenue           | Blocks ads and telemetry for mobile phone.                                                                                                                                                |
-| AntiPCDN           | Blocks P2P2 CDN to speed up streaming access. This is a set of rules collected by this project, which is not yet perfect. We hope everyone can contribute.               |
-| category-games@cn  | Allows games that support china access to use direct connections to save bandwidth.                                                                                      |
-
-### Option One: MihomoParty Direct Installation
+### Solution 1: MihomoParty Direct Installation
 
 ```yaml
 ▸ Configuration File: MihomoParty.yaml
 ▸ Download Link: https://github.com/Ckrvxr/MihomoRules/raw/main/Source/Override/MihomoParty.yaml
 ```
 
-**Steps**
+**Steps:**
 
 1. Download the configuration file.
 2. Open the MihomoParty panle.
@@ -31,7 +32,7 @@ Below is a table of the main functions included in the Mihomo override package:
 4. Enable the "Global Application" switch.
 5. Save.
 
-### Option Two: Subconverter Subscription Conversion
+### Solution 2: Subconverter Subscription Conversion
 
 ```bash
 # Subscription conversion template URL (copy and replace YOURURL field)
@@ -50,7 +51,9 @@ https://api.sublink.dev/sub?config=https://github.com/Ckrvxr/MihomoRules/raw/ref
 
 ---
 
-## 🚀 Routing Rules
+## 🚀 Rules
+
+This project will also generate the following rules in release branch for mihomo routing.
 
 ### 📦 Available Rule Sets
 
