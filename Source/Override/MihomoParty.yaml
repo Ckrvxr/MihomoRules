@@ -156,6 +156,8 @@ proxy-groups:
   - name: "PROXY"
     icon: "https://fastly.jsdelivr.net/gh/shindgewongxj/WHATSINStash@master/icon/select.png"
     type: select
+    proxies:
+      - "⚡ AUTO"
     include-all: true
     exclude-filter: "(?i)GB|Traffic|Expire|Premium|官网|频道|订阅|ISP|流量|到期|重置|过滤"
     url: "http://www.gstatic.com/generate_204"
@@ -221,7 +223,12 @@ proxy-groups:
       - "DIRECT"
       - "REJECT"
     url: "http://www.gstatic.com/generate_204"
-
+  - name: "⚡ AUTO"
+    type: url-test
+    hidden: true
+    include-all: true
+    exclude-filter: "(?i)GB|Traffic|Expire|Premium|官网|频道|订阅|ISP|流量|到期|重置|过滤"
+    url: "http://www.gstatic.com/generate_204"
 rules:
   - "RULE-SET,DirectProcess,DIRECT"
   - "RULE-SET,AntiAntiFraud,REJECT"  
