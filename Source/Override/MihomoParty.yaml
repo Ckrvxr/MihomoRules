@@ -159,7 +159,7 @@ proxy-groups:
     proxies:
       - "⚡ AUTO"
     include-all: true
-    exclude-filter: "(?i)GB|Traffic|Expire|Premium|官网|频道|订阅|ISP|流量|到期|重置|过滤"
+    exclude-filter: "(Official|官网|官網|Data Left|Remain|剩余|剩餘|Traffic|流量|Expire|Expiry|到期|过期|過期|效期|Time|时间|時間|Time Out|超时|超時|Reset|重置|分割线|(\\d[\\d.]*\\s*[MG]B[^\\dA-Za-z]+|[:：]\\s*)\\d[\\d.]*\\s*GB(?!\\dA-Za-z))"
     url: "http://www.gstatic.com/generate_204"
   - name: "P.R.C and Private"
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/China.png"
@@ -227,7 +227,7 @@ proxy-groups:
     type: url-test
     hidden: true
     include-all: true
-    exclude-filter: "(?i)GB|Traffic|Expire|Premium|官网|频道|订阅|ISP|流量|到期|重置|过滤"
+    exclude-filter: "(Official|官网|官網|Data Left|Remain|剩余|剩餘|Traffic|流量|Expire|Expiry|到期|过期|過期|效期|Time|时间|時間|Time Out|超时|超時|Reset|重置|分割线|(\\d[\\d.]*\\s*[MG]B[^\\dA-Za-z]+|[:：]\\s*)\\d[\\d.]*\\s*GB(?!\\dA-Za-z))"
     url: "http://www.gstatic.com/generate_204"
 rules:
   - "RULE-SET,DirectProcess,DIRECT"
