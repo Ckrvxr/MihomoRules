@@ -1,6 +1,6 @@
 # MihomoRules
 
-MihomoRules is a rule library designed for [Mihomo](https://github.com/MetaCubeX/mihomo)(Clash Meta), providing AD-Blocking, Privacy Protection, and AntiAntiFraud features.
+MihomoRules is a personal rule library designed for [Mihomo](https://github.com/MetaCubeX/mihomo)(Clash Meta), providing AD-Blocking, Privacy Protection, and AntiAntiFraud features.
 
 These override scripts all uniformly have the following rules:
 
@@ -17,11 +17,11 @@ These override scripts all uniformly have the following rules:
 
 There are two solutions to override the configuration here, choose one according to the sorftware.
 
-### Solution 1: MihomoParty Direct Installation
+### Solution 1: Sparkle Direct Installation
 
 ```yaml
-▸ Configuration File: MihomoParty.yaml
-▸ Download Link: https://github.com/Ckrvxr/MihomoRules/raw/main/Source/Override/MihomoParty.yaml
+▸ Configuration File: Sparkle.yaml
+▸ Download Link: https://github.com/Ckrvxr/MihomoRules/raw/main/Source/Override/Sparkle.yaml
 ```
 
 **Steps:**
