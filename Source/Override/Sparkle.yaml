@@ -2,7 +2,7 @@ log-level: warning
 
 mixed-port: 7890
 external-controller: "127.0.0.1:9090"
-secret: "MihomoParty"
+secret: "SparkleSparkleSparkle"
 
 mode: rule
 find-process-mode: strict
@@ -229,6 +229,7 @@ proxy-groups:
     include-all: true
     exclude-filter: "(Official|官网|官網|Data Left|Remain|剩余|剩餘|Traffic|流量|Expire|Expiry|到期|过期|過期|效期|Time|时间|時間|Time Out|超时|超時|Reset|重置|分割线|(\\d[\\d.]*\\s*[MG]B[^\\dA-Za-z]+|[:：]\\s*)\\d[\\d.]*\\s*GB(?!\\dA-Za-z))"
     url: "http://www.gstatic.com/generate_204"
+
 rules:
   - "RULE-SET,DirectProcess,DIRECT"
   - "RULE-SET,AntiAntiFraud,REJECT"  
