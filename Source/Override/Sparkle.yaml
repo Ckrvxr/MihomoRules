@@ -151,7 +151,6 @@ rule-providers:
     interval: 43200
     url: "https://fastly.jsdelivr.net/gh/Cats-Team/AdRules@main/adrules_domainset.txt"
 
-
 proxy-groups:
   - name: "PROXY"
     icon: "https://fastly.jsdelivr.net/gh/shindgewongxj/WHATSINStash@master/icon/select.png"
