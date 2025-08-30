@@ -8,7 +8,7 @@ These override scripts all uniformly have the following rules:
 | ----------------- | ----------- |
 | DirectProcess     | Prevents proxy tools and P2P download software from using the proxy. |
 | AntiAntiFraud     | Strongly blocks anti-fraud programs on mobile phones, including automatic uploading of app lists. This is a set of rules collected and organized by this project. |
-| AntiPCDN          | Blocks P2P2 CDN to speed up streaming access. This is a set of rules collected by this project. |
+| AntiPCDN          | Blocks P2P CDN to speed up streaming access. This is a set of rules collected by this project. |
 | AdRules           | Blocks ads and telemetry. |
 | AWAvenue          | Blocks ads and telemetry for mobile phone. |
 | category-games@cn | Allows games that support china access to use direct connections to save bandwidth. |
@@ -43,11 +43,11 @@ https://api.sublink.dev/sub?config=https://github.com/Ckrvxr/MihomoRules/raw/ref
 
 | Parameter | Required | Example Value                 | Function Description          |
 | --------- | -------- | ----------------------------- | ----------------------------- |
-| config    | ✔️       | http://....Subconverter.yaml  | Rule template address         |
-| target    | ✔️       | clash                         | Output format                 |
+| config    | ✔️      | http://....Subconverter.yaml  | Rule template address         |
+| target    | ✔️      | clash                         | Output format                 |
 | udp       |          | true                          | Enable UDP forwarding         |
 | add_emoji |          | true                          | Add emoji flag                |
-| url       | ✔️       | https://...com/subscribe/xxxx | Original subscription address |
+| url       | ✔️      | https://...com/subscribe/xxxx | Original subscription address |
 
 ---
 
