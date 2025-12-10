@@ -20,8 +20,8 @@ There are two solutions to override the configuration here, choose one according
 ### Solution 1: Sparkle Direct Installation
 
 ```yaml
-▸ Configuration File: Sparkle-Lite.yaml
-▸ Download Link: https://github.com/Ckrvxr/MihomoRules/raw/main/Source/Override/Sparkle-Lite.yaml
+▸ Configuration File: Sparkle.yaml
+▸ Download Link: https://github.com/Ckrvxr/MihomoRules/raw/main/Source/Override/Sparkle.yaml
 ```
 
 **Steps:**
@@ -36,7 +36,7 @@ There are two solutions to override the configuration here, choose one according
 
 ```bash
 # Subscription conversion template URL (copy and replace YOURURL field)
-https://api.sublink.dev/sub?config=https://github.com/Ckrvxr/MihomoRules/raw/refs/heads/main/Source/Override/Subconverter-Lite.yaml&target=clash&udp=true&add_emoji=true&url=YOURURL
+https://api.sublink.dev/sub?config=https://github.com/Ckrvxr/MihomoRules/raw/refs/heads/main/Source/Override/Subconverter.yaml&target=clash&udp=true&add_emoji=true&url=YOURURL
 ```
 
 **Parameter Description Table**

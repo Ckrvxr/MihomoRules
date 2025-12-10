@@ -7,28 +7,13 @@ custom:
     - "(Official|官网|官網|Data Left|Remain|剩余|剩餘|Traffic|流量|Expire|Expiry|到期|过期|過期|效期|Time|时间|時間|Time Out|超时|超時|Reset|重置|分割线|(\\d[\\d.]*\\s*[MG]B[^\\dA-Za-z]+|[:：]\\s*)\\d[\\d.]*\\s*GB(?!\\dA-Za-z))"
 
   custom_proxy_group:
-    - name: "PROXY"
+    - name: "✈️ PROXY"
       type: select
       rule: [".*"]  
-    - name: "🇨🇳 P.R.C and Private"
-      type: select
-      rule: ["[]DIRECT", "[]PROXY", "[]REJECT"]  
-    - name: "🤖 Google"
-      type: select
-      rule: ["[]PROXY", "[]DIRECT", "[]REJECT"]  
-    - name: "Ⓜ️ Microsoft"
-      type: select
-      rule: ["[]PROXY", "[]DIRECT", "[]REJECT"]
-    - name: "🍎 Apple"
-      type: select
-      rule: ["[]PROXY", "[]DIRECT", "[]REJECT"]
-    - name: "🌎 Others"
-      type: select
-      rule: ["[]PROXY", "[]DIRECT", "[]REJECT"]
-    - name: "🛑 AD & Privacy"
+    - name: "🔰 AD & Privacy"
       type: select
       rule: ["[]REJECT", "[]PASS"]
-    - name: "🛑 PCDN"
+    - name: "⛔️ PCDN"
       type: select
       rule: ["[]REJECT", "[]PASS"]
       
@@ -40,36 +25,36 @@ custom:
     - rule: "RULE-SET,AntiPCDNFix"
       group: DIRECT
     - rule: "RULE-SET,AntiPCDN"
-      group: "🛑 PCDN"
+      group: "⛔️ PCDN"
     - rule: "RULE-SET,AWAvenue"
-      group: "🛑 AD & Privacy"
+      group: "🔰 AD & Privacy"
     - rule: "RULE-SET,AdRules"
-      group: "🛑 AD & Privacy"
+      group: "🔰 AD & Privacy"
     # https://github.com/v2fly/domain-list-community/blob/master/data/category-games
     # https://github.com/Loyalsoldier/v2ray-rules-dat?tab=readme-ov-file#%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95
     - rule: "GEOSITE,category-games@cn"
-      group: "🇨🇳 P.R.C and Private"
+      group: DIRECT
     # https://www.yetpage.com/archives/278
     - rule: "GEOSITE,google"
-      group: "🤖 Google"
+      group: "✈️ PROXY"
     - rule: "GEOSITE,microsoft"
-      group: "Ⓜ️ Microsoft"
+      group: "✈️ PROXY"
     - rule: "GEOSITE,apple"
-      group: "🍎 Apple"
+      group: "✈️ PROXY"
     - rule: "GEOSITE,private"
-      group: "🇨🇳 P.R.C and Private"
+      group: DIRECT
     - rule: "GEOSITE,cn"
-      group: "🇨🇳 P.R.C and Private"
+      group: DIRECT
     - rule: "GEOSITE,!cn"
-      group: "🌎 Others"
+      group: "✈️ PROXY"
     - rule: "GEOIP,private"
-      group: "🇨🇳 P.R.C and Private"
+      group: DIRECT
     - rule: "GEOIP,cn"
-      group: "🇨🇳 P.R.C and Private"
+      group: DIRECT
     - rule: "GEOIP,!cn"
-      group: "🌎 Others"
+      group: "✈️ PROXY"
     - rule: "MATCH"
-      group: "🌎 Others"
+      group: "✈️ PROXY"
 
   add_emoji: true
   remove_old_emoji: true

@@ -153,52 +153,12 @@ rule-providers:
 
 proxy-groups:
   - name: "PROXY"
-    icon: "https://fastly.jsdelivr.net/gh/shindgewongxj/WHATSINStash@master/icon/select.png"
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Rocket.png"
     type: select
     proxies:
       - "⚡ AUTO"
     include-all: true
     exclude-filter: "(Official|官网|官網|Data Left|Remain|剩余|剩餘|Traffic|流量|Expire|Expiry|到期|过期|過期|效期|Time|时间|時間|Time Out|超时|超時|Reset|重置|分割线|(\\d[\\d.]*\\s*[MG]B[^\\dA-Za-z]+|[:：]\\s*)\\d[\\d.]*\\s*GB(?!\\dA-Za-z))"
-    url: "http://www.gstatic.com/generate_204"
-  - name: "P.R.C and Private"
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/China.png"
-    type: select
-    proxies:
-      - "DIRECT"
-      - "PROXY"
-      - "REJECT"
-    url: "http://connect.rom.miui.com/generate_204"
-  - name: "Google"
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google_Search.png"
-    type: select
-    proxies:
-      - "PROXY"
-      - "DIRECT"
-      - "REJECT"
-    url: "http://www.gstatic.com/generate_204"
-  - name: "Microsoft"
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Microsoft.png"
-    type: select
-    proxies:
-      - "PROXY"
-      - "DIRECT"
-      - "REJECT"
-    url: "http://www.msftconnecttest.com/connecttest.txt"
-  - name: "Apple"
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple.png"
-    type: select
-    proxies:
-      - "PROXY"
-      - "DIRECT"
-      - "REJECT"
-    url: "http://captive.apple.com"
-  - name: "Others"
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Final.png"
-    type: select
-    proxies:
-      - "PROXY"
-      - "DIRECT"
-      - "REJECT"
     url: "http://www.gstatic.com/generate_204"
   - name: "PCDN"
     icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Server.png"
@@ -215,7 +175,7 @@ proxy-groups:
       - "PASS"
     url: "http://www.gstatic.com/generate_204"
   - name: "GLOBAL"
-    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Global.png"
+    icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Final_1.png"
     type: select
     proxies:
       - "PROXY"
@@ -238,15 +198,15 @@ rules:
   - "RULE-SET,AdRules,AD & Privacy"
   # https://github.com/v2fly/domain-list-community/blob/master/data/category-games
   # https://github.com/Loyalsoldier/v2ray-rules-dat?tab=readme-ov-file#%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95
-  - "GEOSITE,category-games@cn,P.R.C and Private"
-  - "GEOSITE,microsoft,Microsoft"
-  - "GEOSITE,apple,Apple"
+  - "GEOSITE,category-games@cn,DIRECT"
   # https://www.yetpage.com/archives/278
-  - "GEOSITE,google,Google"
-  - "GEOSITE,private,P.R.C and Private"
-  - "GEOSITE,cn,P.R.C and Private"
-  - "GEOSITE,!cn,Others"
-  - "GEOIP,private,P.R.C and Private"
-  - "GEOIP,cn,P.R.C and Private"
-  - "GEOIP,!cn,Others"
-  - "MATCH,Others"
+  - "GEOSITE,google,PROXY"
+  - "GEOSITE,microsoft,PROXY"
+  - "GEOSITE,apple,PROXY"
+  - "GEOSITE,private,DIRECT"
+  - "GEOSITE,cn,DIRECT"
+  - "GEOSITE,!cn,PROXY"
+  - "GEOIP,private,DIRECT"
+  - "GEOIP,cn,DIRECT"
+  - "GEOIP,!cn,PROXY"
+  - "MATCH,PROXY"
