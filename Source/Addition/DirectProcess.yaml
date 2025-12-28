@@ -99,6 +99,10 @@ payload:
   - PROCESS-NAME,com.dv.adm
   # (P2P) Snappy Driver Installer
   - PROCESS-NAME-REGEX,SDI_.*
+  # (P2P) Synchronization Program
+  - PROCESS-NAME,com.github.catfriend1.syncthingandroid
+  - PROCESS-NAME,syncthing
+  - PROCESS-NAME,syncthing.exe
   # (VPN)
   - PROCESS-NAME,tailscale
   - PROCESS-NAME,tailscale.exe
