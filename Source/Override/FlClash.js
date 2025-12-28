@@ -119,7 +119,7 @@ const main = (config) => {
         { match: /(France|法国|法國|法兰西|法蘭西|Paris|巴黎|Marseille|马赛|馬賽|\bFR(?:\d*\s*)?)/i, emoji: "🇫🇷" },
         { match: /(Gabon|加蓬|\bGA(?:\d*\s*)?)/i, emoji: "🇬🇦" },
         { match: /(Gambia|冈比亚|岡比亞|\bGM(?:\d*\s*)?)/i, emoji: "🇬🇲" },
-        { match: /(Georgia|格鲁吉亚|格魯吉亞|\bGE(?:\d*\s*)?)/i, emoji: "🇬🇪" },
+        { match: /(Georgia|格鲁吉亚|格魯吉亞|\bGE(?!(mini))\d*\b)/i, emoji: "🇬🇪" }
         { match: /(Germany|德国|德國|德意志|Berlin|柏林|Hamburg|汉堡|漢堡|Munich|慕尼黑|\bDE(?:\d*\s*)?)/i, emoji: "🇩🇪" },
         { match: /(Ghana|加纳|加納|\bGH(?:\d*\s*)?)/i, emoji: "🇬🇭" },
         { match: /(Greece|希腊|希臘|Athens|雅典|\bGR(?:\d*\s*)?)/i, emoji: "🇬🇷" },
