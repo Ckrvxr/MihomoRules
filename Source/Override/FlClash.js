@@ -272,7 +272,7 @@ const main = (config) => {
             p.name = processNameWithEmoji(p.name);
         });
     }
-    const excludeRegex = /(Official|官网|Data Left|Remain|剩余|流量|Expire|过期|时间|Reset|重置|GB|MB)/i;
+    const excludeRegex = /(Official|官网|Data Left|Remain|剩余|流量|Expire|过期|时间|到期|Reset|重置|GB|MB)/i;
     const allProxies = config.proxies.map(p => p.name);
     const filteredProxies = allProxies.filter(name => !excludeRegex.test(name));
 
