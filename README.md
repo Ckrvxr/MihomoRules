@@ -19,9 +19,8 @@ There are two solutions to override the configuration here, choose one according
 
 ### Solution 1: Sparkle
 
-```yaml
-▸ Configuration File: Sparkle.yaml
-▸ Download Link: https://github.com/Ckrvxr/MihomoRules/raw/main/Source/Override/Sparkle.yaml
+```url
+https://github.com/Ckrvxr/MihomoRules/raw/main/Source/Override/Sparkle.yaml
 ```
 
 **Steps:**
@@ -34,9 +33,8 @@ There are two solutions to override the configuration here, choose one according
 
 ### Solution 2: FlClash
 
-```yaml
-▸ Configuration File: FlClash.js
-▸ Download Link: https://github.com/Ckrvxr/MihomoRules/raw/main/Source/Override/FlClash.js
+```url
+https://github.com/Ckrvxr/MihomoRules/raw/main/Source/Override/FlClash.js
 ```
 
 **Steps:**
