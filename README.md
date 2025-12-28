@@ -17,7 +17,7 @@ These override scripts all uniformly have the following rules:
 
 There are two solutions to override the configuration here, choose one according to the sorftware.
 
-### Solution 1: Sparkle Direct Installation
+### Solution 1: Sparkle
 
 ```yaml
 ▸ Configuration File: Sparkle.yaml
@@ -27,29 +27,32 @@ There are two solutions to override the configuration here, choose one according
 **Steps:**
 
 1. Download the configuration file.
-2. Open the MihomoParty panle.
-3. Go to the "Override Configuration" interface and upload the file.
-4. Enable the "Global Application" switch.
+2. Open the Sparkle panle.
+3. Go to the **"Override Configuration"** interface and upload the file.
+4. Enable the **"Global Application"** switch of script.
 5. Save.
 
-### Solution 2: Subconverter Subscription Conversion
+### Solution 2: FlClash
 
-```bash
-# Subscription conversion template URL (copy and replace YOURURL field)
-https://api.sublink.dev/sub?config=https://github.com/Ckrvxr/MihomoRules/raw/refs/heads/main/Source/Override/Subconverter.yaml&target=clash&udp=true&add_emoji=true&url=YOURURL
+```yaml
+▸ Configuration File: FlClash.js
+▸ Download Link: https://github.com/Ckrvxr/MihomoRules/raw/main/Source/Override/FlClash.js
 ```
 
-**Parameter Description Table**
+**Steps:**
 
-| Parameter | Required | Example Value                       | Function Description          |
-| --------- | -------- | ----------------------------------- | ----------------------------- |
-| config    | ✔️       | http://....Subconverter-Lite.yaml   | Rule template address         |
-| target    | ✔️       | clash                               | Output format                 |
-| udp       |          | true                                | Enable UDP forwarding         |
-| add_emoji |          | true                                | Add emoji flag                |
-| url       | ✔️       | https://...com/subscribe/xxxx       | Original subscription address |
+1. Open the FlClash Dash panle.
+2. Switch to **"Tools"** page.
+3. Click **"Advanced configuration"** option.
+4. Click **"Script"** option.
+5. Add the scipt provide by this project.
+6. Switch to **"Profiles"** page.
+7. Click **"..."** Buttom.
+8. Click **"More"** Option.
+9. Click **"Overide"** Option.
+10. Switch Overide mode to **"Script"** and select our script, then save.
+11. Resync our Subs.
 
----
 
 ## 🚀 Rules
 
@@ -91,3 +94,4 @@ rules:
 - https://github.com/LoopDns/Fuck-you-MIUI/
 - https://github.com/Cats-Team/AdRules
 - https://github.com/TG-Twilight/AWAvenue-Ads-Rule
+- https://github.com/chen08209/FlClash
