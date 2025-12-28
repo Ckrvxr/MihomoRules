@@ -15,6 +15,7 @@ payload:
   - DOMAIN-SUFFIX,stun.hitv.com
   - DOMAIN-SUFFIX,tpa-hcdn.iqiyi.com
   - DOMAIN-SUFFIX,mcdn.bilivideo.cn
+  - DOMAIN-SUFFIX,edge.mountaintoys.cn
   - AND,((DOMAIN-SUFFIX,biliapi.net),(DOMAIN-KEYWORD,pcdn))
   - AND,((DOMAIN-SUFFIX,youku.com),(DOMAIN-KEYWORD,pcdn))
   - AND,((DOMAIN-SUFFIX,douyucdn.cn),(DOMAIN-KEYWORD,p2p))
