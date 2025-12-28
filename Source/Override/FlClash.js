@@ -1,5 +1,5 @@
 const main = (config) => {
-    // --------------------------------------------------- 基础配置 ---------------------------------------------------
+    // 基础配置
     config["log-level"] = "warning";
     config["mode"] = "rule";
     config["ipv6"] = true;
@@ -55,7 +55,7 @@ const main = (config) => {
         "AdRules": { "type": "http", "behavior": "domain", "format": "text", "interval": 43200, "url": "https://fastly.jsdelivr.net/gh/Cats-Team/AdRules@main/adrules_domainset.txt" }
     };
 
-    // -------------------------------------------------- 节点预处理 --------------------------------------------------
+    // 节点预处理
     const emojiData = [
         { match: /(Afghanistan|阿富汗|\bAF(?:\d*\s*)?)/i, emoji: "🇦🇫" },
         { match: /(Albania|阿尔巴尼亚|阿爾巴尼亞|\bAL(?:\d*\s*)?)/i, emoji: "🇦🇱" },
@@ -256,7 +256,6 @@ const main = (config) => {
         let newName = name;
         for (let item of emojiData) {
             if (item.match.test(newName)) {
-                // 如果已有 Emoji，替换它；如果没有，则在开头添加
                 if (emojiRegex.test(newName)) {
                     newName = newName.replace(emojiRegex, item.emoji);
                 } else {
@@ -276,7 +275,7 @@ const main = (config) => {
     const allProxies = config.proxies.map(p => p.name);
     const filteredProxies = allProxies.filter(name => !excludeRegex.test(name));
 
-    // --------------------------------------------------- 规则生成 ---------------------------------------------------
+    // 规则生成
     config["proxy-groups"] = [
         {
             name: "🚀 PROXY",
@@ -284,7 +283,7 @@ const main = (config) => {
             proxies: ["⚡ AUTO", ...filteredProxies]
         },
         {
-            name: "🏠 PCDN",
+            name: "🧼 PCDN",
             type: "select",
             proxies: ["REJECT", "PASS"]
         },
@@ -306,7 +305,7 @@ const main = (config) => {
         "RULE-SET,DirectProcess,DIRECT",
         "RULE-SET,AntiAntiFraud,REJECT",
         "RULE-SET,AntiPCDNFix,DIRECT",
-        "RULE-SET,AntiPCDN,🏠 PCDN",
+        "RULE-SET,AntiPCDN,🧼 PCDN",
         "RULE-SET,AWAvenue,🔰 AD & Privacy",
         "RULE-SET,AdRules,🔰 AD & Privacy",
         "GEOSITE,category-games@cn,DIRECT",
