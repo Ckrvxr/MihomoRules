@@ -7,9 +7,8 @@ const main = (config) => {
     config["dns"] = {
         "enable": true,
         "listen": "127.0.0.1:1053",
+        "cache-algorithm": "arc",
         "ipv6": true,
-        "enhanced-mode": "fake-ip",
-        "fake-ip-range": "198.18.0.1/16",
         "default-nameserver": [
             "223.5.5.5", 
             "119.29.29.29"
@@ -21,6 +20,8 @@ const main = (config) => {
         "nameserver-policy": {
             "geosite:private": ["system"] 
         },
+        "enhanced-mode": "fake-ip",
+        "fake-ip-range": "198.18.0.1/16",
         "fake-ip-filter": [
             "192.168.0.0/16", 
             "172.16.0.0/12", 
