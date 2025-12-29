@@ -1,6 +1,6 @@
 const main = (config) => {
     // 基础配置
-    config["log-level"] = "warning";
+    config["log-level"] = "error";
     config["mode"] = "rule";
     config["ipv6"] = true;
     config["find-process-mode"] = "strict";
