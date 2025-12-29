@@ -2,8 +2,10 @@ const main = (config) => {
     // 基础配置
     config["log-level"] = "error";
     config["mode"] = "rule";
+    config["profile"] = { "store-selected": true , "store-fake-ip": true };
     config["ipv6"] = true;
     config["find-process-mode"] = "strict";
+    config["tun"] = { "enable": true, "auto-route": true, "auto-redirect": true, "strict-route": true, "mtu": 9000 }; // 接管所有流量，在内核路由中路由流量，简化流程
     config["dns"] = {
         "enable": true,
         "listen": "127.0.0.1:1053",
@@ -51,7 +53,6 @@ const main = (config) => {
             "+.mijia.tech"
         ]
     };
-    config["tun"] = { "enable": true, "auto-route": true, "auto-redirect": true, "strict-route": true, "mtu": 9000 };
     config["sniffer"] = {
         "enable": true,
         "parse-pure-ip": true,
