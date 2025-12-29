@@ -24,15 +24,30 @@ const main = (config) => {
         "fake-ip-filter": [
             "192.168.0.0/16", 
             "172.16.0.0/12", 
-            "10.0.0.0/8", 
+            "10.0.0.0/8",
             "+.local", 
             "+.localdomain", 
             "+.localhost", 
             "+.lan", 
+            "+.time.*.com",
+            "+.time.*.*.com",
+            "+.time.*.net",
+            "+.time.*.org",
             "+.ntp.*.com",
-            "+.stun.*",
-             "Mijia Cloud",
-             "+.mijia.tech"
+            "+.ntp.*.*.com",
+            "+.ntp.*.net",
+            "+.ntp.*.org",
+            "+.stun.*.com",
+            "+.stun.*.*.com",
+            "+.stun.*.net",
+            "+.stun.*.*.net",
+            "+.stun.*.org",
+            "+.stunprotocol.org",
+            "+.srv.nintendo.net",
+            "+.steamserver.net",
+            "+.xboxlive.com",
+            "Mijia Cloud",
+            "+.mijia.tech"
         ]
     };
     config["tun"] = { "enable": true, "auto-route": true, "auto-redirect": true, "strict-route": true, "mtu": 9000 };
