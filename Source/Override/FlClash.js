@@ -1,4 +1,11 @@
+// jdsdelivr mirror:
+// 1. https://fastly.jsdelivr.net/gh/
+// 2. https://gcore.jsdelivr.net/gh/
+// 3. https://testingcf.jsdelivr.net/
 // 3. https://cdn.jsdmirror.com/gh
+// 4. https://cdn.jsdmirror.cn/gh
+// 5. https://cdn.jsdmirror.com/gh
+
 const main = (config) => {
     // 基础配置
     config["log-level"] = "error";
