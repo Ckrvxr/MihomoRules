@@ -10,10 +10,23 @@ const main = (config) => {
     // 基础配置
     config["log-level"] = "error";
     config["mode"] = "rule";
+    config["unified-delay"] = true;
     config["profile"] = { "store-selected": true , "store-fake-ip": true };
     config["ipv6"] = true;
     config["find-process-mode"] = "strict";
-    config["tun"] = { "enable": true, "auto-route": true, "auto-redirect": true, "strict-route": true, "mtu": 9000 }; // 接管所有流量，在内核路由中路由流量，简化流程
+    config["tun"] = { // 接管所有流量，在内核路由中路由流量，简化流程
+        "enable": true,
+        "stack": "system",
+        "auto-route": true,
+        "auto-redirect": true,
+        "auto-detect-interface": true,
+        "strict-route": true,
+        "mtu": 9000,
+        "dns-hijack": [
+            "udp://any:53",
+            "tcp://any:53"
+        ]
+    };
     config["dns"] = {
         "enable": true,
         "listen": "127.0.0.1:1053",
@@ -71,6 +84,16 @@ const main = (config) => {
         },
         "skip-domain": ["Mijia Cloud", "+.mijia.tech", "+.push.apple.com"]
     };
+    config["geodata-mode"] = true;
+    config["geodata-loader"] = "standard";
+    config["geo-auto-update"] = true;
+    config["geo-update-interval"] = 12; // 12H
+    config["geox-url"] = {
+        "geoip": "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat",
+        "geosite": "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat",
+        "mmdb": "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/country.mmdb",
+        "asn": "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/GeoLite2-ASN.mmdb"
+    };
     config["rule-providers"] = {
         "DirectProcess": {
             "type": "http",
@@ -115,7 +138,7 @@ const main = (config) => {
             "url": "https://fastly.jsdelivr.net/gh/Cats-Team/AdRules@main/adrules_domainset.txt" 
         }
     };
-
+    
     // 节点预处理
     const emojiData = [
         { match: /(Afghanistan|阿富汗|\bAF(?:\d*\s*)?)/i, emoji: "🇦🇫" },
