@@ -72,12 +72,48 @@ const main = (config) => {
         "skip-domain": ["Mijia Cloud", "+.mijia.tech", "+.push.apple.com"]
     };
     config["rule-providers"] = {
-        "DirectProcess": { "type": "http", "behavior": "classical", "format": "yaml", "interval": 43200, "url": "https://fastly.jsdelivr.net/gh/Ckrvxr/MihomoRules@main/Source/Addition/DirectProcess.yaml" },
-        "AntiAntiFraud": { "type": "http", "behavior": "classical", "format": "yaml", "interval": 43200, "url": "https://fastly.jsdelivr.net/gh/Ckrvxr/MihomoRules@main/Source/Addition/AntiAntiFraud.yaml" },
-        "AntiPCDNFix": { "type": "http", "behavior": "classical", "format": "yaml", "interval": 43200, "url": "https://fastly.jsdelivr.net/gh/Ckrvxr/MihomoRules@main/Source/Addition/AntiPCDNFix.yaml" },
-        "AntiPCDN": { "type": "http", "behavior": "classical", "format": "yaml", "interval": 43200, "url": "https://fastly.jsdelivr.net/gh/Ckrvxr/MihomoRules@main/Source/Addition/AntiPCDN.yaml" },
-        "AWAvenue": { "type": "http", "behavior": "domain", "format": "yaml", "interval": 43200, "url": "https://fastly.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-Clash.yaml" },
-        "AdRules": { "type": "http", "behavior": "domain", "format": "text", "interval": 43200, "url": "https://fastly.jsdelivr.net/gh/Cats-Team/AdRules@main/adrules_domainset.txt" }
+        "DirectProcess": {
+            "type": "http",
+            "behavior": "classical",
+            "format": "yaml",
+            "interval": 43200, // 12H
+            "url": "https://fastly.jsdelivr.net/gh/Ckrvxr/MihomoRules@main/Source/Addition/DirectProcess.yaml"
+        },
+        "AntiAntiFraud": {
+            "type": "http",
+            "behavior": "classical",
+            "format": "yaml",
+            "interval": 43200, // 12H
+            "url": "https://fastly.jsdelivr.net/gh/Ckrvxr/MihomoRules@main/Source/Addition/AntiAntiFraud.yaml"
+        },
+        "AntiPCDNFix": {
+            "type": "http",
+            "behavior": "classical",
+            "format": "yaml",
+            "interval": 43200, // 12H
+            "url": "https://fastly.jsdelivr.net/gh/Ckrvxr/MihomoRules@main/Source/Addition/AntiPCDNFix.yaml"
+        },
+        "AntiPCDN": {
+            "type": "http",
+            "behavior": "classical",
+            "format": "yaml",
+            "interval": 43200, // 12H
+            "url": "https://fastly.jsdelivr.net/gh/Ckrvxr/MihomoRules@main/Source/Addition/AntiPCDN.yaml"
+        },
+        "AWAvenue": {
+            "type": "http",
+            "behavior": "domain",
+            "format": "yaml",
+            "interval": 43200, // 12H
+            "url": "https://fastly.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-Clash.yaml"
+        },
+        "AdRules": {
+            "type": "http",
+            "behavior": "domain",
+            "format": "text",
+            "interval": 43200, // 12H
+            "url": "https://fastly.jsdelivr.net/gh/Cats-Team/AdRules@main/adrules_domainset.txt" 
+        }
     };
 
     // 节点预处理
