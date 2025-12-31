@@ -1,3 +1,4 @@
+// 3. https://cdn.jsdmirror.com/gh
 const main = (config) => {
     // 基础配置
     config["log-level"] = "error";
