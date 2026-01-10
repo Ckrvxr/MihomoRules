@@ -36,15 +36,6 @@ jobs:
     #       echo "Fail due to unsupported mihomo architecture"
     #       exit 1
     #     fi
-    
-    # - name: Download domains file for anti-AD-EDNS
-    #   run: curl -o anti-AD-EDNS.domains https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/discretion/dns.txt
-
-    # - name: Convert hosts to Mihomo rules yaml (Domain) for anti-AD-EDNS
-    #   run: python3 Source/Script/DomainsToYAML.py anti-AD-EDNS.domains anti-AD-EDNS.yaml  
-
-    # - name: Combine Mihomo rules yaml (Domain) With IP for anti-AD-EDNS
-    #   run: python3 Source/Script/YAMLCombineIP.py anti-AD-EDNS.yaml anti-AD-EDNS.yaml
 
     - name: Download hosts file for StevenBlack
       run: curl -o StevenBlack.hosts https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
@@ -54,18 +45,6 @@ jobs:
 
     # - name: Compile to Mihomo rules binary for StevenBlack
     #   run: mihomo convert-ruleset domain yaml StevenBlack.yaml StevenBlack.mrs
-
-    - name: Download hosts file for Fuck-You-MIUI-Fhosts
-      run: curl -o Fuck-You-MIUI-Fhosts.hosts https://raw.githubusercontent.com/LoopDns/Fuck-you-MIUI/refs/heads/main/Fhosts
-    
-    - name: Convert hosts to Mihomo rules yaml for Fuck-You-MIUI-Fhosts
-      run: python3 Source/Script/HostsToYAML.py Fuck-You-MIUI-Fhosts.hosts Fuck-You-MIUI-Fhosts.yaml
-    
-    - name: Download hosts file for Fuck-You-MIUI-MIhosts
-      run: curl -o Fuck-You-MIUI-MIhosts.hosts https://raw.githubusercontent.com/LoopDns/Fuck-you-MIUI/refs/heads/main/MIhosts
-
-    - name: Convert hosts to Mihomo rules yaml for Fuck-You-MIUI-MIhosts
-      run: python3 Source/Script/HostsToYAML.py Fuck-You-MIUI-MIhosts.hosts Fuck-You-MIUI-MIhosts.yaml
     
     - name: Push to releases branch
       run: |
