@@ -135,12 +135,12 @@ const main = (config) => {
             "interval": 43200, // 12H
             "url": "https://fastly.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/Filters/AWAvenue-Ads-Rule-Clash.yaml"
         },
-        "AdRules": {
+        "217heidaiAdblockFilters": {
             "type": "http",
             "behavior": "domain",
-            "format": "text",
+            "format": "yaml",
             "interval": 43200, // 12H
-            "url": "https://fastly.jsdelivr.net/gh/Cats-Team/AdRules@main/adrules_domainset.txt" 
+            "url": "https://fastly.jsdelivr.net/gh/217heidai/adblockfilters@main/rules/adblockmihomo.yaml" 
         }
     };
     
@@ -396,7 +396,8 @@ const main = (config) => {
         "RULE-SET,AntiPCDNFix,DIRECT",
         "RULE-SET,AntiPCDN,🧼 PCDN",
         "RULE-SET,AWAvenue,🔰 AD & Privacy",
-        "RULE-SET,AdRules,🔰 AD & Privacy",
+        "RULE-SET,217heidaiAdblockFilters,🔰 AD & Privacy",
+        "GEOSITE,category-ads-all,🔰 AD & Privacy",
         "GEOSITE,category-games@cn,DIRECT",
         "GEOSITE,google,🚀 PROXY",
         "GEOSITE,microsoft,🚀 PROXY",
