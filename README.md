@@ -1,7 +1,7 @@
-# MihomoRules
+# MihomoYAML
 
 
-MihomoRules is a personal rule library designed for [Mihomo](https://github.com/MetaCubeX/mihomo) (Clash Meta), providing AD-Blocking, Privacy Protection, and AntiAntiFraud features.
+MihomoYAML is a personal rule library designed for [Mihomo](https://github.com/MetaCubeX/mihomo) (Clash Meta), providing AD-Blocking, Privacy Protection, and AntiAntiFraud features.
 
 ## ✨ Features
 
@@ -28,7 +28,7 @@ MihomoRules is a personal rule library designed for [Mihomo](https://github.com/
 ### Solution 1: Sparkle Configuration
 
 ```url
-https://github.com/Ckrvxr/MihomoRules/raw/main/Source/Override/Sparkle.yaml
+https://github.com/Ckrvxr/MihomoYAML/raw/main/Source/Override/Sparkle.yaml
 ```
 
 **Steps:**
@@ -42,7 +42,7 @@ https://github.com/Ckrvxr/MihomoRules/raw/main/Source/Override/Sparkle.yaml
 ### Solution 2: FlClash Configuration
 
 ```url
-https://github.com/Ckrvxr/MihomoRules/raw/main/Source/Override/FlClash.js
+https://github.com/Ckrvxr/MihomoYAML/raw/main/Source/Override/FlClash.js
 ```
 
 **Steps:**
@@ -65,7 +65,7 @@ This project also generates some rule sets in the release branch for mihomo rout
 
 ### Available Rule Sets
 
-(Available rule sets are in the [Release](https://github.com/Ckrvxr/MihomoRules/tree/release) branch)
+(Available rule sets are in the [Release](https://github.com/Ckrvxr/MihomoYAML/tree/release) branch)
 
 ### Integration Example
 
@@ -76,7 +76,7 @@ rule-providers:
     behavior: classical
     format: yaml
     interval: 43200
-    url: "hhttps://fastly.jsdelivr.net/gh/Ckrvxr/MihomoRules@RELEASE/StevenBlack.yaml"
+    url: "hhttps://fastly.jsdelivr.net/gh/Ckrvxr/MihomoYAML@RELEASE/StevenBlack.yaml"
 
 rules:
   - ...
@@ -87,7 +87,7 @@ rules:
 ## 🛠️ Project Structure
 
 ```
-MihomoRules/
+MihomoYAML/
 ├── Source/
 │   ├── Addition/          # Additional rule files
 │   │   ├── AntiAntiFraud.yaml

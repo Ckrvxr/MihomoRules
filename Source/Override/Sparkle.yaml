@@ -119,25 +119,25 @@ rule-providers:
     behavior: classical
     format: yaml
     interval: 43200
-    url: "https://fastly.jsdelivr.net/gh/Ckrvxr/MihomoRules@main/Source/Addition/DirectProcess.yaml"
+    url: "https://fastly.jsdelivr.net/gh/Ckrvxr/MihomoYAML@main/Source/Addition/DirectProcess.yaml"
   AntiAntiFraud:
     type: http
     behavior: classical
     format: yaml
     interval: 43200
-    url: "https://fastly.jsdelivr.net/gh/Ckrvxr/MihomoRules@main/Source/Addition/AntiAntiFraud.yaml"
+    url: "https://fastly.jsdelivr.net/gh/Ckrvxr/MihomoYAML@main/Source/Addition/AntiAntiFraud.yaml"
   AntiPCDNFix:
     type: http
     behavior: classical
     format: yaml
     interval: 43200
-    url: "https://fastly.jsdelivr.net/gh/Ckrvxr/MihomoRules@main/Source/Addition/AntiPCDNFix.yaml"
+    url: "https://fastly.jsdelivr.net/gh/Ckrvxr/MihomoYAML@main/Source/Addition/AntiPCDNFix.yaml"
   AntiPCDN:
     type: http
     behavior: classical
     format: yaml
     interval: 43200
-    url: "https://fastly.jsdelivr.net/gh/Ckrvxr/MihomoRules@main/Source/Addition/AntiPCDN.yaml"
+    url: "https://fastly.jsdelivr.net/gh/Ckrvxr/MihomoYAML@main/Source/Addition/AntiPCDN.yaml"
   AWAvenue:
     type: http
     behavior: domain
